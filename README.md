@@ -9,7 +9,7 @@ Este projeto implementa uma agenda de compromissos em Java, utilizando um arquiv
 
 ## Escopo do Projeto
 
-O projeto abrange as seguintes funcionalidades:
+O projeto abrange as seguintes funcionalidades do CRUD:
 
 *   **Criar (Create):** Incluir novos compromissos na agenda, armazenando-os no arquivo JSON.
 *   **Visualizar (Read):** Exibir os compromissos da semana, lendo os dados do arquivo JSON.
