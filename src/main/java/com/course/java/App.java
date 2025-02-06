@@ -7,7 +7,7 @@ public class App {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Escolha as funções da agenda:");
+        System.out.println("Escolha uma funções da agenda:");
 
 
 
