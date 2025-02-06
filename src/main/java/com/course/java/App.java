@@ -1,7 +1,19 @@
 package com.course.java;
 
+import java.util.Scanner;
+
 public class App {
+
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Escolha as funções da agenda:");
+
+
+
+
+
+
         // Vamos incluir os compromissos da semana em um arquivo Json
         agendarCompromisso();
 
@@ -37,6 +49,9 @@ public class App {
     private static void agendarCompromisso() {
 
         System.out.println("Neste metodo serão agendados os compromissos");
+
+
+
 
     }
 }
