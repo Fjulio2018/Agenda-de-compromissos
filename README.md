@@ -34,12 +34,14 @@ O arquivo `agenda.json` deve armazenar os compromissos em formato JSON. Por exem
 ```json
 [
   {
+    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",  
     "titulo": "Reunião com cliente",
     "data": "2024-08-22",
     "hora": "10:00",
     "descricao": "Discutir o novo projeto"
   },
   {
+    "id": "f0e1d2c3-b4a5-9876-5432-109876fedcba",  
     "titulo": "Almoço com a equipe",
     "data": "2024-08-23",
     "hora": "12:00",
