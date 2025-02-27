@@ -21,6 +21,8 @@ O projeto abrange as seguintes funcionalidades do CRUD:
 1. Faça o download do SQLiteStudio
 2. Crie um banco com o nome de IBM_STUDIO.db
 3. Crie a tabela:
+
+
    CREATE TABLE IF NOT EXISTS compromissos (
    id INTEGER PRIMARY KEY AUTOINCREMENT,
    titulo TEXT NOT NULL,
