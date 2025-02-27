@@ -16,6 +16,20 @@ O projeto abrange as seguintes funcionalidades do CRUD:
 *   **Alterar (Update):** Modificar um compromisso existente, atualizando as informações no arquivo JSON.
 *   **Deletar (Delete):** Remover compromissos passados da agenda, excluindo-os do arquivo JSON.
 
+## Como Criar o Banco
+
+1. Faça o download do SQLiteStudio
+2. Crie um banco com o nome de IBM_STUDIO.db
+3. Crie a tabela:
+   CREATE TABLE IF NOT EXISTS compromissos (
+   id INTEGER PRIMARY KEY AUTOINCREMENT,
+   titulo TEXT NOT NULL,
+   descricao TEXT,
+   data TEXT NOT NULL
+   );
+
+
+
 ## Como Executar
 
 1.  Clone o repositório do projeto.
@@ -26,25 +40,3 @@ O projeto abrange as seguintes funcionalidades do CRUD:
 ## Como Usar
 
 A aplicação deve apresentar um menu com as opções para criar, visualizar, alterar e deletar compromissos. O usuário deve interagir com o menu para realizar as operações desejadas.
-
-## Formato do Arquivo JSON
-
-O arquivo `agenda.json` deve armazenar os compromissos em formato JSON. Por exemplo:
-
-```json
-[
-  {
-    "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",  
-    "titulo": "Reunião com cliente",
-    "data": "2024-08-22",
-    "hora": "10:00",
-    "descricao": "Discutir o novo projeto"
-  },
-  {
-    "id": "f0e1d2c3-b4a5-9876-5432-109876fedcba",  
-    "titulo": "Almoço com a equipe",
-    "data": "2024-08-23",
-    "hora": "12:00",
-    "descricao": "Comemoração do projeto"
-  }
-]
