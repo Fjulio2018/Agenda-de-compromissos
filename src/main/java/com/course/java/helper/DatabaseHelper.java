@@ -101,4 +101,22 @@ public class DatabaseHelper {
             System.err.println("⚠️ Erro ao excluir compromisso: " + e.getMessage());
         }
     }
+
+    public static void deletarTudo() {
+
+        String deleteSQL = "DELETE FROM compromissos";
+        try (Connection conn = connect();
+             PreparedStatement pstmt = conn.prepareStatement(deleteSQL)) {
+
+            int affectedRows = pstmt.executeUpdate();
+
+            if (affectedRows > 0) {
+                System.out.println("✅ Todos os compromissos foram excluídos com sucesso!");
+            } else {
+                System.out.println("📭 Nenhum compromisso para excluir.");
+            }
+        } catch (SQLException e) {
+            System.err.println("⚠️ Erro ao excluir todos os compromissos: " + e.getMessage());
+        }
+    }
 }
