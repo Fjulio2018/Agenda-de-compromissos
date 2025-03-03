@@ -111,6 +111,7 @@ public class ExecHelper {
             System.out.println("🆔 ID: " + compromisso.getString("id"));
             System.out.println("📌 Título: " + compromisso.getString("titulo"));
             System.out.println("📆 Data: " + compromisso.getString("data"));
+            System.out.println("📆 Hora: " + compromisso.getString("hora"));
             System.out.println("📝 Descrição: " + compromisso.getString("descricao"));
             System.out.println("--------------------------------------------------");
         }
@@ -126,10 +127,13 @@ public class ExecHelper {
         System.out.print("Nova descrição: ");
         String novaDescricao = sc.nextLine().trim();
 
-        System.out.print("Nova data (AAAA-MM-DD): ");
+        System.out.print("Nova data (DD-MM-AAAA): ");
         String novaData = sc.nextLine().trim();
 
-        DatabaseHelper.alterarCompromisso(id, novoTitulo, novaDescricao, novaData);
+        System.out.print("Nova hora (HH:MM): ");
+        String novaHora = sc.nextLine().trim();
+
+        DatabaseHelper.alterarCompromisso(id, novoTitulo, novaDescricao, novaData,  novaHora);
     }
 
     public static void deletarCompromisso(Scanner sc) {
