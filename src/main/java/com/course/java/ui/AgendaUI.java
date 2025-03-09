@@ -98,10 +98,12 @@ public class AgendaUI {
     }
 
 
-    // Cria os botões de ação
     private void createActionButtons(JPanel panel) {
         JPanel actionPanel = new JPanel();
         panel.add(actionPanel, BorderLayout.SOUTH);
+
+        // Adiciona uma borda com título "Ações" no painel de ações
+        actionPanel.setBorder(BorderFactory.createTitledBorder("Ações"));
 
         JButton visualizarButton = new JButton("Visualizar");
         JButton alterarButton = new JButton("Alterar");
@@ -121,6 +123,7 @@ public class AgendaUI {
         excluirTodosButton.addActionListener(e -> excluirTodosCompromissos());
         encerrarButton.addActionListener(e -> encerrarPrograma());
     }
+
 
     // Adiciona um novo compromisso
     private void adicionarCompromisso() {
