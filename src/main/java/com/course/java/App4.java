@@ -12,7 +12,10 @@ public class App4 {
     public static void main(String[] args) {
 
         DatabaseHelper.initializeDatabase();
-        javax.swing.SwingUtilities.invokeLater(AgendaUI::new);
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            AgendaUI app = new AgendaUI();
+            app.start();
+        });
 
         Scanner sc = new Scanner(System.in);
         while (true) {
