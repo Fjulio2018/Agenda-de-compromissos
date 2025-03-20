@@ -48,7 +48,7 @@ public class AgendaUI {
         gbc.insets = new Insets(5, 5, 5, 5);
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        addFormField(formPanel, gbc, "Título:", tituloField = new JTextField(20), 0);
+        addFormField(formPanel, gbc, "Título:", tituloField = new JTextField(40), 0);
         addFormField(formPanel, gbc, "Data (DD/MM/AAAA):", dataField = new JTextField(10), 1);
         addFormField(formPanel, gbc, "Hora (HH:MM):", horaField = new JTextField(5), 2);
         addFormField(formPanel, gbc, "Descrição:", descricaoArea = new JTextArea(3, 20), 3);
