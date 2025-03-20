@@ -20,17 +20,23 @@ public class AgendaController {
     }
 
     public void adicionarCompromisso(String titulo, String data, String hora, String descricao) {
-        if (service.validarCampos(titulo, data, hora, descricao) && service.validarDataHora(data, hora)) {
-            JSONObject compromisso = new JSONObject();
-            compromisso.put("titulo", titulo);
-            compromisso.put("data", data);
-            compromisso.put("hora", hora);
-            compromisso.put("descricao", descricao);
-            service.salvarCompromisso(compromisso);
-            ui.atualizarTabela(service.buscarCompromissosFormatados());
-            ui.limparCampos();
-            ui.mostrarMensagem("Compromisso adicionado com sucesso!", "Info");
+        if (!service.validarCampos(titulo, data, hora, descricao)) {
+            ui.mostrarMensagem("Preencha todos os campos corretamente.", "Erro");
+            return;
         }
+        if (!service.validarDataHora(data, hora)) {
+            ui.mostrarMensagem("A data ou hora informada é anterior ao momento atual. Corrija para uma data/hora futura.", "Erro");
+            return;
+        }
+        JSONObject compromisso = new JSONObject();
+        compromisso.put("titulo", titulo);
+        compromisso.put("data", data);
+        compromisso.put("hora", hora);
+        compromisso.put("descricao", descricao);
+        service.salvarCompromisso(compromisso);
+        ui.atualizarTabela(service.buscarCompromissosFormatados());
+        ui.limparCampos();
+        ui.mostrarMensagem("Compromisso adicionado com sucesso!", "Info");
     }
 
     public void visualizarCompromissos() {
